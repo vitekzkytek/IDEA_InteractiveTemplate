@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119824152-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119824152-2');
+    </script>
+    <!-- Facebook jssdk-->
+    <script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v3.0"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Odkud se rekrutují výzkumníci?</title>
+
+    <!-- External libraries and fonts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+
+
+    <!-- own scripts -->
+    <script type="text/javascript" src="js/page.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    </link>
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    </link>
+</head>
+
+<body onload="loadJS()">
+    <div id="everything">
+        <div id="intro" class="fix fullscreen fixactive">
+            <div class="content">
+                <h1 id="title">Odkud se rekrutují výzkumníci?</h1>
+                <h2 id="subtitle">Kariérní postup a mobilita akademiků</h2>
+
+                <p style="font-size:calc(15px + .7vh);">Vít Macháček a Martin Srholec</p>
+                <div id="logos">
+                    <a href="https://idea.cerge-ei.cz/" target="_blank"><img src="img/idea-white2.svg" class="logo" /></a>
+                    <a href="http://av21.avcr.cz/" target="_blank"><img src="img/strategie_red_white.svg" class="logo" /></a>
+                </div>
+
+                <p style="line-height: .5">Think-tank IDEA při Národohospodářském ústavu AV ČR</p>
+                <p style="line-height: .5">Studie č. X/2019</p>
+                <p style="line-height: .5">Listopad 2019</p>
+                <br />
+                <img src="img/down-arrow2.svg" onclick="MoveOn('ProcSledovat')" class='arrow' title="Posunujte kolečkem myši dolů" />
+
+            </div>
+        </div>
+        <div id="empty-intro" class="fixempty fullscreen"></div>
+        <div id="menu" class="floaty">
+                <a class="corner" href="https://idea.cerge-ei.cz/" target="_blank" style="left:10px;"><img src="img/IDEA2.png" /></a>
+            <div class="content">
+
+                <center>
+                    <a id="mIntro" onclick="MoveOn('Intro')">Úvod</a>
+                    <a id="mapp" onclick="MoveOn('empt-app')">Interaktivní aplikace</a>
+                    <a id="mConclusion" onclick="MoveOn('conclusion')">Závěr</a>
+                </center>
+            </div>
+            <a class="corner" href="http://av21.avcr.cz/" target="_blank" style="right: 10px;"><img src="img/justStrategyWhite.png" /></a>
+
+        </div>
+        <div id="menuempty"></div>
+        <div id="intro" class="flow flowtext">
+            <div class="content">
+                <h3>Úvod</h3>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+                <p>Tato sekce musí být poměrně dlouhá, aby za ní nebylo vidět přepnutí úvodní obrazovky ... </p>
+
+            </div>
+        </div>
+        <div id="app" class="fix fullscreen">
+            <div class="chartcontainer">
+
+            </div>
+        </div>
+        <div id="empt-app" class="fixempty fullscreen"></div>
+        <div class="fixempty fullscreen"></div>
+
+        <div id="conclusion" class="flow flowtext">
+            <div class="content">
+                <h3>Pár slov závěrem</h3>
+                <p class="tip">Tip: Doporučujeme nad aplikací strávit delší čas a dopodrobna prozkoumat srovnání, která Vás zajímají nejvíce.</p>
+            </div>
+        </div>
+        <div id="empt-conclusion" class="fixempty fullscreen"></div>
+
+        <div id="thanks" class="flow">
+            <div class="content">
+                <h1 id="title">Děkujeme za pozornost!</h1>
+
+                <a href="https://idea.cerge-ei.cz/" target="_blank"><img src="img/IDEA_greybcg.svg" class="logo" /></a>
+                <a href="http://av21.avcr.cz/" target="_blank"><img src="img/Logo_Strategie_V3m.svg" class="logo" /></a>
+                <h2 id="subtitle">Pokud se Vám to líbilo, nezapomeňte se o to podělit s ostatními!</h2>
+
+                <div id="shares">
+                    <a id="fb" target="_blank" href=""><img src="img/fb.svg" /></a>
+                    <a id="tw" target="_blank" href=""><img src="img/twitter2.svg" /></a>
+                    <a id="li" target="_blank" href=""><img src="img/linkedin.svg" /></a>
+                    <a id="mail" href=""><img src="img/mail.svg" /></a>
+                    <a onclick="showCopyLink()"><img src="img/link.svg" /></a>
+                </div>
+                <div>
+
+                    <div></div>
+                </div>
+                <p class="footcredits">Doporučená citace: <a class="modalLink" onclick="showModal('modMy')">Sidorkin, O. a
+                        Srholec, M.</a> (2018) Kde vznikají nejcitovanější patenty? Studie
+                    14/2018.
+                    Think-tank IDEA při NHÚ AV ČR.</p>
+
+                <p class="footcredits" style="padding-bottom:50px;">Upozornění: Veškeré případné nepřesnosti a chyby jdou na vrub autorů, stejně jako
+                    názory a tvrzení ve studii uvedené. Studie vznikla s podporou Akademie věd ČR v rámci Strategie AV
+                    21.
+                    Za cenné připomínky k pracovní verzi studie děkujeme kolegům z CERGE-EI.</p>
+            </div>
+        </div>
+
+
+        <div id="modalWrap" class="modalBackground">
+            <div id="modXXX" class="modal">
+                <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+                <div class="modalBody">
+                    <h3>XXX</h3>
+                    <p>ZZZ</p>
+                </div>
+                <center><a onclick="hideModal()" class="button buttonActive">Skrýt</a></center>
+            </div>
+
+            <div id="modPodekovani" class="modal">
+                    <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+                    <div class="modalBody">
+                        <h3>Poděkování</h3>
+                        <p>Tato studie vznikla díky podpoře AV ČR v rámci Strategie AV21. Za cenné připomínky děkujeme Danielu Münichovi a <span style="font-weight:600;color:red;background-color:yellow;">xxx</span>. Veškeré názory, případné nepřesnosti, opominutí nebo chyby však jdou pouze na vrub autorů.</p>
+                    </div>
+                    <center><a onclick="hideModal()" class="button buttonActive">Skrýt</a></center>
+                </div>
+            <div id="modPredchoziStudie" class="modal">
+                <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+                <div class="modalBody">
+                    <h3>Předchozí studie think-tanku IDEA</h3>
+                    <p>Doporučujeme předchozí studie think-tanku IDEA na související témata:</p>
+                    <p>Sidorkin, O. and Srholec, M. (2017) <a href="https://idea.cerge-ei.cz/files/IDEA_Study_8_2017_Direct_subsidies_and_R&D_output_in_firms/mobile/index.html" target="_blank">Do direct subsidies stimulate new R&D output in firms? A comparison of IMPULS, TIP and ALFA programmes</a>. Studie 8/2017. Think-tank IDEA při NHÚ AV ČR.</p>
+                    <p>Palguta, J., and Srholec, M. (2016) <a href="https://idea.cerge-ei.cz/files/IDEA_Studie_17_2016_Prime_dotace_a_soukrome_vydaje_na_VaV/mobile/index.html" target="_blank">Stimulují přímé dotace soukromé výdaje firem na VaV? Metoda regresní diskontinuity</a>. Studie 17/2016. Think-tank IDEA při NHÚ AV ČR. </p>
+                    <p>Macháček, V. a Srholec, M. (2016) <a href="https://idea.cerge-ei.cz/files/IDEA_Studie_15_2016_Podnikani_akademiku/mobile/index.html" target="_blank">Transfer znalostí do praxe podnikajícími akademiky v České republice</a>. Studie 8/2016. Think-tank IDEA při NHÚ AV ČR. </p>
+                    <p>Podívejte se na videa ze seminářů k těmto publikacím:</p>
+                    <p>15. 6. 2017 - Seminář "<a href="https://slideslive.com/38901444/vedou-statni-dotace-firemniho-vyzkumu-a-vyvoje-k-novym-vysledkum?subdomain=false" target="_blank">Vedou státní dotace firemního výzkumu a vývoje k novým výsledkům?</a>"</p>
+                    <p>2. 12. 2016 – Seminář "<a href="https://youtu.be/XT6cBMp0piQ" target="_blank">Motivační účinky podpory výzkumu a vývoje ve firmách: Kontrafaktuální přístup k hodnocení programů</a>"</p>
+                    <p>Na <a href="https://idea.cerge-ei.cz/" target="_blank">stránkách think-tanku IDEA</a> najdete i mnoho dalších  studií.</p>
+                </div>
+                <center><a onclick="hideModal()" class="button buttonActive">Skrýt</a></center>
+            </div>
+
+
+            <div id="modMy" class="modal">
+                    <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+                        <div class="modalBody" style="padding:0vw 20vw;">
+                           <h3>O autorech</h3>
+                            <div class="medailon">
+                               <h4>Oleg Sidorkin</h4>
+                                <center><img src="img/oleg_final.JPG" class="imgMy right" /></center>
+                                <p>Doktorský titul získal na CERGE-EI. Od roku 2017 působí v Leibniz Institute for East and Southeast European Studies v Německu. S think-tankem IDEA spolupracuje od roku 2015. Zaměřuje se na ekonomii inovací, politikou ekonomii a aplikovanou mikroekonomii.</p>
+                                <p>E-mail: <a href="mailto:oleg.sidorkin@cerge-ei.cz" >oleg.sidorkin@cerge-ei.cz</a></p>
+                            </div>
+                            <div class="medailon">
+                                <h4>Martin Srholec</h4>
+                                <center><img src="img/martin_final.JPG" class="imgMy right" /></center>
+                                <p>Doktorské studium absolvoval na Národohospodářské fakultě VŠE a&nbsp;na Centre for Technology, Innovation and Culture při Univerzitě v&nbsp;Oslu. Od roku 2010 působí jako vědecký pracovník na CERGE-EI v&nbsp;Praze. Mezi roky 2011 a&nbsp;2017 zároveň působil v&nbsp;rámci Centre for Innovation, Research and Competence in the Learning Economy (CIRCLE) v&nbsp;Lundu. S&nbsp;think-tankem IDEA spolupracuje od roku 2013. Zaměřuje se&nbsp;na ekonomii inovací, problematiku inovačních systémů a&nbsp;otázky inovační politiky.</p>
+                                <p>E-mail: <a href="mailto:martin.srholec@cerge-ei.cz" >martin.srholec@cerge-ei.cz</a></p>
+                            </div>
+                                <center><a onclick="hideModal()" class="button buttonActive">Skrýt</a></center>
+
+                        </div>
+                    </div>
+
+
+
+            <div id="modRozliseni" class="modal">
+                <div class="modalBody">
+                    <h3>Nízké rozlišení</h3>
+                    <p>Omlouváme se, ale tato interaktivní aplikace není vhodná pro mobilní telefony. Na příliš nízkých
+                        rozlišeních - méně než 1024x768 - její čtení nemá smysl. Studii doporučujeme zobrazit na
+                        stolním
+                        počítači, notebooku či většině tabletů. Případně zkuste prohlížeč maximalizovat.</p>
+                    <p>Pokud máte vhodné zařízení, maximalizujte obrazovku a aktualizujte stránku (F5).</p>
+                    <p>Chcete-li si čtení nechat na později, zkuste si zkopírovat internetovou adresu a pošlete si ji
+                        na
+                        svůj osobní počítač.</p>
+                    <div style="margin:30px;">
+                        <input type="text" value="" id="myurl2">
+
+                        <button onclick="copyLink('myurl2','linkCopied2')" class="button buttonActive">Zkopírovat</button>
+                        <span id="linkCopied2" class="linkCopied">Odkaz zkopírován</span>
+                    </div>
+
+                </div>
+            </div>
+            <div id="modCopyLink" class="modal">
+                <div class="close" onclick="hideModal()"><img src="img/closeIcon3.svg" /></div>
+                <div class="modalBody">
+                    <h3>Zkopírovat odkaz</h3>
+                    <div style="margin:30px;">
+                        <input type="text" value="" id="myurl">
+
+                        <button onclick="copyLink('myurl','linkCopied')" class="button buttonActive"> Zkopírovat</button>
+                        <span id="linkCopied" class="linkCopied">Odkaz zkopírován</span>
+                    </div>
+                    <center><a onclick="hideModal()" class="button buttonActive">Skrýt</a></center>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+</html>
